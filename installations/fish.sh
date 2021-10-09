@@ -5,7 +5,7 @@ sudo apt-get update
 sudo apt-get install fish
 
 # Fisher (PM)
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+fish -C "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher && exit"
 
 # Pure (fish prompt)
-fisher install pure-fish/pure
+fish -C "fisher install pure-fish/pure && exit"
