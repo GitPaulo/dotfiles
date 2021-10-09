@@ -15,6 +15,12 @@ function installations () {
   cd - || exit
 }
 
+function stowem () {
+  cd dotstows || exit
+  ./stowem.sh
+  cd - || exit
+}
+
 read -p "Run installations? [y/n]"$'\n' answer
 case ${answer:0:1} in
     y|Y )
@@ -28,7 +34,7 @@ esac
 read -p "Run stows? [y/n] "$'\n' answer2
 case ${answer2:0:1} in
     y|Y )
-        ./dotstows/stowem.sh;
+        stowem;
     ;;
     * )
         echo -e "Skipped stows...\n"
