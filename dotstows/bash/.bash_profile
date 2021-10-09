@@ -6,6 +6,5 @@ for file in ~/.bash_profile_*; do
 	echo $file
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
-unset file;
 
-[ -s "/home/paulo/.jabba/jabba.sh" ] && source "/home/paulo/.jabba/jabba.sh"
+unset file;

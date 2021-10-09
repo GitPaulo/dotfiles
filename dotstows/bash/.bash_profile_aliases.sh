@@ -17,7 +17,8 @@ alias ls="command ls ${colorflag}" # Always use color output for `ls`
 
 # fzf & vim
 alias f="fzf"
-alias vf="vim $(fzf)"
+alias v="vim"
+alias v.="vim ."
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"

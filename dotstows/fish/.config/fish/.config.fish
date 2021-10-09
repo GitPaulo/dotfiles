@@ -5,7 +5,7 @@ end
 set fish_greeting "Welcome Paulo. Remember you're in Fish!"
 
 # Workaround for jabba on fish
-# [ -s "/home/santosp/.jabba/jabba.fish" ]; and source "/home/santosp/.jabba/jabba.fish"
+[ -s "/home/santosp/.jabba/jabba.fish" ]; and source "/home/santosp/.jabba/jabba.fish"
 
 # Vi mode
 fish_vi_key_bindings

@@ -15,3 +15,8 @@ function dataurl() {
 	fi
 	echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')";
 }
+
+# Weird one
+function vf () {
+  vim $(f);
+}
