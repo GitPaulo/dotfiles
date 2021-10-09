@@ -15,3 +15,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # My profile (dependant on some installation sources)
 [ -n "$PS1" ] && source ~/.bash_profile
+
+# Neofetch at the end
+[ -x "$(neofetch -v)" ] && neofetch

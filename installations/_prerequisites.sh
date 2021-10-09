@@ -9,3 +9,5 @@ echo "Installing prerequisites..."
 sudo apt install stow
 # fish
 sudo apt install build-essential cmake ncurses-dev libncurses5-dev libpcre2-dev gettext
+# bro
+sudo apt-get install ruby-full
