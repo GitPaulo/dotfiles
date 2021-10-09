@@ -1,22 +1,25 @@
 #!/bin/bash
 # Full one tap installation script for everything
 
+export DOTFILES=~/dotfiles
+
 function installations () {
-  cd installations || exit
+  cd "${DOTFILES}/installations" || exit
   for installation in ./*.sh; do
     read -p "Run installation: '${installation}'? [y/n]"$'\n' -n 1 -r
     if [[ ! $REPLY =~ ^[Yy]$ ]]
     then
       echo -e "Skipped installation...\n"
-    else 
-      "$installation"
+    else
+      echo
+      ./"$installation"
     fi
   done
   cd - || exit
 }
 
 function stowem () {
-  cd dotstows || exit
+  cd "${DOTFILES}/dotstows" || exit
   ./stowem.sh
   cd - || exit
 }
