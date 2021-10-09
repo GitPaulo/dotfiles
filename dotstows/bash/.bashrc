@@ -1,9 +1,5 @@
 # .bashrc (INL Shells)
 
-# Just a check
-[[ $- == *i* ]] && echo 'Interactive' || echo 'Not interactive'
-shopt -q login_shell && echo 'Login shell' || echo 'Not login shell'
-
 # Installation appends and others...
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
