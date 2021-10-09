@@ -2,11 +2,10 @@
 My dotfiles and new workspace installation scripts.
 
 **TODO:**
-- Finish dotstows
+- Fonts?
+- WSL (powerline 7 + starship + windows terminal if win10) setup script?
 - Cross os configs with subfolders using stow
-- More installation scripts
 - Installation script when re ran update instead
-- Clean ups
 
 ## Usage
 
