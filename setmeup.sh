@@ -24,6 +24,10 @@ function stowem () {
   cd - || exit
 }
 
+function postsetups() {
+  vim +'PlugInstall --sync' +qa
+}
+
 read -p "Run installations? [y/n]"$'\n' answer
 case ${answer:0:1} in
     y|Y )
@@ -41,5 +45,15 @@ case ${answer2:0:1} in
     ;;
     * )
         echo -e "Skipped stows...\n"
+    ;;
+esac
+
+read -p "Run post-setups? [y/n] "$'\n' answer3
+case ${answer3:0:1} in
+    y|Y )
+        postsetups;
+    ;;
+    * )
+        echo -e "Skipped post-setups...\n"
     ;;
 esac

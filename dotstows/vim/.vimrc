@@ -1,3 +1,6 @@
+"" Theme
+colorscheme pablo
+
 "" Config
 set number	" Show line numbers
 set relativenumber " User relative line numbersz
@@ -49,3 +52,69 @@ function! ToggleNumber()
         set relativenumber
     endif
 endfunc
+
+"" Plugins (vim-plug)
+call plug#begin()
+
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'junegunn/vim-easy-align'
+
+" Plugin outside ~/.vim/plugged with post-update hook
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+" Line
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Tree explorer
+Plug 'preservim/nerdtree'
+
+" Floaterm
+Plug 'voldikss/vim-floaterm'
+
+" Surround.vim
+Plug 'https://github.com/tpope/vim-surround.git'
+
+" Repeat.vim
+Plug 'https://github.com/tpope/vim-repeat.git'
+
+" Theme
+Plug 'tomasr/molokai'
+
+" Color para
+Plug 'kien/rainbow_parentheses.vim'
+
+call plug#end()
+
+"" Mappings (Plugins)
+
+" FZF
+nnoremap <leader><leader> :GFiles<CR>
+nnoremap <leader>fi       :Files<CR>
+nnoremap <leader>C        :Colors<CR>
+nnoremap <leader><CR>     :Buffers<CR>
+nnoremap <leader>fl       :Lines<CR>
+nnoremap <leader>ag       :Ag! <C-R><C-W><CR>
+nnoremap <leader>m        :History<CR>
+
+" Easy Align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" Nerd TREE
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+" Floaterm
+nnoremap   <silent>   <F7>    :FloatermNew<CR>
+tnoremap   <silent>   <F7>    <C-\><C-n>:FloatermNew<CR>
+nnoremap   <silent>   <F8>    :FloatermPrev<CR>
+tnoremap   <silent>   <F8>    <C-\><C-n>:FloatermPrev<CR>
+nnoremap   <silent>   <F9>    :FloatermNext<CR>
+tnoremap   <silent>   <F9>    <C-\><C-n>:FloatermNext<CR>
+nnoremap   <silent>   <F12>   :FloatermToggle<CR>
+tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
