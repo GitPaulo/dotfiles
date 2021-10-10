@@ -29,6 +29,10 @@ set softtabstop=4	" Number of spaces per Tab
 set ruler	" Show row and column ruler information
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
+
+" natural split openings
+set splitbelow
+set splitright
  
 "" Extra
 syntax on # highlight syntax
@@ -44,6 +48,14 @@ nnoremap gV `[v`]
 
 " save session
 nnoremap <leader>s :mksession<CR>
+
+" split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+
 
 "" Functions
 " toggle between number and relativenumber

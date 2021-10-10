@@ -2,8 +2,7 @@
 My dotfiles and new workspace installation scripts.
 
 **TODO:**
-- Fonts?
-- WSL (powerline 7 + starship + windows terminal if win10) setup script?
+- Test robustness of scripts sometime... lol
 - Cross os configs with subfolders using stow (remove apt, clone more repos?)
 - Installations scripts when re ran update instead
 
