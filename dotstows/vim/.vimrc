@@ -1,6 +1,9 @@
 "" Theme
 colorscheme pablo
 
+"" Highlight insert mode
+:autocmd InsertEnter,InsertLeave * set cul!
+
 "" Config
 set number	" Show line numbers
 set relativenumber " User relative line numbersz
@@ -60,7 +63,8 @@ call plug#begin()
 Plug 'junegunn/vim-easy-align'
 
 " Plugin outside ~/.vim/plugged with post-update hook
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Line
 Plug 'vim-airline/vim-airline'
@@ -78,8 +82,11 @@ Plug 'https://github.com/tpope/vim-surround.git'
 " Repeat.vim
 Plug 'https://github.com/tpope/vim-repeat.git'
 
-" Theme
-Plug 'tomasr/molokai'
+" Themes
+Plug 'jacoborus/tender.vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'https://github.com/cocopon/iceberg.vim'
+Plug 'bluz71/vim-moonfly-colors'
 
 " Color para
 Plug 'kien/rainbow_parentheses.vim'
@@ -89,13 +96,13 @@ call plug#end()
 "" Mappings (Plugins)
 
 " FZF
-nnoremap <leader><leader> :GFiles<CR>
-nnoremap <leader>fi       :Files<CR>
-nnoremap <leader>C        :Colors<CR>
-nnoremap <leader><CR>     :Buffers<CR>
-nnoremap <leader>fl       :Lines<CR>
-nnoremap <leader>ag       :Ag! <C-R><C-W><CR>
-nnoremap <leader>m        :History<CR>
+nnoremap <leader>f    :Files<CR>
+nnoremap <leader>fg   :GFiles<CR>
+nnoremap <leader>fc   :Colors<CR>
+nnoremap <leader><CR> :Buffers<CR>
+nnoremap <leader>fl   :Lines<CR>
+nnoremap <leader>ag   :Ag! <C-R><C-W><CR>
+nnoremap <leader>fh   :History<CR>
 
 " Easy Align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -118,3 +125,9 @@ nnoremap   <silent>   <F9>    :FloatermNext<CR>
 tnoremap   <silent>   <F9>    <C-\><C-n>:FloatermNext<CR>
 nnoremap   <silent>   <F12>   :FloatermToggle<CR>
 tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
+
+" Post commands (Plugins)
+
+" Theme
+syntax enable
+colorscheme iceberg

@@ -7,6 +7,11 @@ shell_type=""
 shopt -q login_shell && shell_type="${shell_type} Login Shell" || shell_type="${shell_type} Non Login Shell"
 echo "$shell_type"
 
+# Modes
+set show-mode-in-prompt on
+set vi-cmd-mode-string "\1\e[2 q\2"
+set vi-ins-mode-string "\1\e[6 q\2"
+
 # Source bash_profile_ files
 for file in ~/.bash_profile_*; do
 	echo $file
