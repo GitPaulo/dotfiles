@@ -13,5 +13,5 @@ git clone https://github.com/GitPaulo/dotfiles.git ~/dotfiles
 ~/dotfiles/setmeup.sh
 ```
 
-*If using WSL make sure opening terminal as login shell
+*If using WSL make sure opening terminal as login shell \
 *Tested on Debian based distros
