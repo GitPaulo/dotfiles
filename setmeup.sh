@@ -26,6 +26,7 @@ function stowem () {
 
 function postsetups() {
   vim +'PlugInstall --sync' +qa
+  echo "Ignore .vimrc erorrs, installed plugins restart vim!"
 }
 
 read -p "Run installations? [y/n]"$'\n' answer
