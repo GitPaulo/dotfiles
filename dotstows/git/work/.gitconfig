@@ -148,7 +148,6 @@
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 	
-# home settings (move to dir when very bored)
 [user]
 	email = paulo.santos@thehutgroup.com
 	name = Paulo Santos
