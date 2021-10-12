@@ -1,4 +1,4 @@
 #!/bin/bash
 
 sudo apt install net-tools
-sudo apt install ipconfig
+sudo apt install ifconfig
