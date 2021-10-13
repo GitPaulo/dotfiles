@@ -2,6 +2,7 @@
 My dotfiles and new workspace installation scripts.
 
 **TODO:**
+- Check PATH addition are correct? WSL login shell bugging out nvm/jabba?
 - Test robustness of scripts sometime... lol
 - Cross os configs with subfolders using stow (remove apt, clone more repos?)
 - Installations scripts when re ran update instead
