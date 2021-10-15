@@ -1,5 +1,9 @@
 # .bashrc (INL Shells)
 
+# Default editor
+export VISUAL=vim;
+export EDITOR=vim;
+
 # Installation appends and others...
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
