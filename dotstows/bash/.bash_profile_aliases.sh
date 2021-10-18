@@ -20,7 +20,7 @@ alias f="fzf"
 alias v="vim"
 alias v.="vim ."
 alias r="ranger"
-alis r.="ranger ."
+alias r.="ranger ."
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
