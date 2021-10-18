@@ -15,10 +15,12 @@ alias la="ls -lAF ${colorflag}" # List all files colorized in long format, exclu
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'" # List only directories
 alias ls="command ls ${colorflag}" # Always use color output for `ls`
 
-# fzf & vim
+# fzf & vim & ranger
 alias f="fzf"
 alias v="vim"
 alias v.="vim ."
+alias r="ranger"
+alis r.="ranger ."
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
