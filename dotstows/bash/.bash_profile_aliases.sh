@@ -22,6 +22,10 @@ alias v.="vim ."
 alias r="ranger"
 alias r.="ranger ."
 
+# starship
+alias bashship='eval "$(starship init bash)"'
+alias fishship='starship init fish | source'
+
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
