@@ -42,7 +42,7 @@ stashed = "📦 "
 modified = "📝×${count} "
 staged = "➕×${count} "
 renamed = "🖌×${count} "
-deleted = "🗑️×${count} "
+deleted = "🗑️ ×${count} "
 style = "bold bright-white"
 format = "$all_status$ahead_behind"
 
