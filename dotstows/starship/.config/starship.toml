@@ -13,7 +13,7 @@ error_symbol = "[❌](bold red)"
 
 [cmd_duration]
 min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
-format = " took [$duration]($style)"
+format = "took [$duration]($style)"
 style = "bold #a4ff24"
 
 [directory]
