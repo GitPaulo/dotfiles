@@ -55,8 +55,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-
-
 "" Functions
 " toggle between number and relativenumber
 function! ToggleNumber()
@@ -70,6 +68,12 @@ endfunc
 
 "" Plugins (vim-plug)
 call plug#begin()
+
+" Git and Vim
+Plug 'tpope/vim-fugitive'
+
+" Auto pop complete
+ Plug 'vim-scripts/AutoComplPop'
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
@@ -95,6 +99,7 @@ Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/tpope/vim-repeat.git'
 
 " Themes
+Plug 'morhetz/gruvbox'
 Plug 'jacoborus/tender.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'https://github.com/cocopon/iceberg.vim'
@@ -142,4 +147,4 @@ tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
 
 " Theme
 syntax enable
-colorscheme iceberg
+colorscheme gruvbox
