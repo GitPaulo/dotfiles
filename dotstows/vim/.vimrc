@@ -181,4 +181,7 @@ let g:syntastic_check_on_wq = 0
 
 " Theme
 syntax enable
-colorscheme gruvbox
+
+if filereadable( expand("$HOME/.vim/colors/gruvbox.vim") )
+    colorscheme gruvbox
+endif
