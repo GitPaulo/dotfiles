@@ -1,5 +1,10 @@
-"" Theme
-colorscheme pablo
+" Functions
+function! PlugLoaded(name)
+  return (
+    \ has_key(g:plugs, a:name) &&
+    \ isdirectory(g:plugs[a:name].dir) &&
+    \ stridx(&rtp, g:plugs[a:name].dir) >= 0)
+endfunction
 
 "" Highlight insert mode
 :autocmd InsertEnter,InsertLeave * set cul!
@@ -181,7 +186,13 @@ let g:syntastic_check_on_wq = 0
 
 " Theme
 syntax enable
+colorscheme pablo
 
-if filereadable( expand("$HOME/.vim/colors/gruvbox.vim") )
+" Gruvbox our real default
+if PlugLoaded('morhetz/gruvbox')
     colorscheme gruvbox
 endif
+
+" Force transparency
+hi Normal guibg=NONE ctermbg=NONE
+
