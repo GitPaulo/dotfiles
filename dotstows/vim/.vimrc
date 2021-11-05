@@ -90,6 +90,15 @@ Plug 'vim-syntastic/syntastic'
 " Auto pop complete
  Plug 'vim-scripts/AutoComplPop'
 
+" Commenter
+Plug 'preservim/nerdcommenter'
+
+" Editor Config
+Plug 'editorconfig/editorconfig-vim'
+
+" Ack Vim
+Plugin 'mileszs/ack.vim'
+
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
 
