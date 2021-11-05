@@ -88,7 +88,7 @@ Plug 'preservim/vimux'
 Plug 'vim-syntastic/syntastic'
 
 " Auto pop complete
- Plug 'vim-scripts/AutoComplPop'
+Plug 'vim-scripts/AutoComplPop'
 
 " Commenter
 Plug 'preservim/nerdcommenter'
@@ -97,7 +97,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'editorconfig/editorconfig-vim'
 
 " Ack Vim
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
