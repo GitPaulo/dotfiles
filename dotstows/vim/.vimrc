@@ -72,6 +72,9 @@ call plug#begin()
 " Git and Vim
 Plug 'tpope/vim-fugitive'
 
+" Syntastic
+Plug 'vim-syntastic/syntastic'
+
 " Auto pop complete
  Plug 'vim-scripts/AutoComplPop'
 
@@ -142,6 +145,16 @@ nnoremap   <silent>   <F9>    :FloatermNext<CR>
 tnoremap   <silent>   <F9>    <C-\><C-n>:FloatermNext<CR>
 nnoremap   <silent>   <F12>   :FloatermToggle<CR>
 tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Post commands (Plugins)
 
