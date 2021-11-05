@@ -72,6 +72,18 @@ call plug#begin()
 " Git and Vim
 Plug 'tpope/vim-fugitive'
 
+" Git gutter (diff)
+Plug 'airblade/vim-gitgutter'
+
+" Context (clause bar)
+Plug 'wellle/context.vim'
+
+" Prettier 4 Vim
+Plug 'prettier/vim-prettier'
+
+" TMUX + vim
+Plug 'preservim/vimux'
+
 " Syntastic
 Plug 'vim-syntastic/syntastic'
 
