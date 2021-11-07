@@ -5,7 +5,7 @@ export PATH="$HOME/bin:$PATH";
 shell_type=""
 [[ $- == *i* ]] && shell_type="Interactive" || shell_type="Non Interactive"
 shopt -q login_shell && shell_type="${shell_type} Login Shell" || shell_type="${shell_type} Non Login Shell"
-echo "$shell_type"
+echo "[$shell_type]\n"
 
 # Modes
 set show-mode-in-prompt on
@@ -16,6 +16,7 @@ set vi-ins-mode-string "\1\e[6 q\2"
 [ -n "$PS1" ] && source ~/.bashrc
 
 # Source bash_profile_ files
+echo '[Profile Modules]'
 for file in ~/.bash_profile_*; do
 	echo $file
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
