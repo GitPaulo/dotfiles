@@ -1,24 +1,7 @@
 #!/bin/bash
 
 # env=home,work
-
-options=("home" "work" "quit")
-select env in "${options[@]}"; do
-  case $env in
-  "home")
-    echo "Stowing for home environmment."
-    break
-    ;;
-  "work")
-    echo "Stowing for work environmment."
-    break
-    ;;
-  "quit")
-    exit
-    ;;
-  *) echo "invalid option!" ;;
-  esac
-done
+env=$1
 
 echo 'Removing default dotfiles...'
 rm ~/.bash_profile ~/.bashrc ~/.curlrc ~/.gitconfig ~/.vimrc ~/.wgetrc ~/.config/neofetch/config.conf ~/.config/fish/config.fish
