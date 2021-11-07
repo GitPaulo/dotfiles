@@ -188,9 +188,7 @@ syntax enable
 colorscheme pablo
 
 " Gruvbox our real default
-if PlugLoaded('gruvbox')
-    colorscheme gruvbox
-endif
+colorscheme gruvbox
 
 " Highlight insert mode
 :autocmd InsertEnter,InsertLeave * set cul!
