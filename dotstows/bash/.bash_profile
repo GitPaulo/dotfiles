@@ -23,3 +23,6 @@ for file in ~/.bash_profile_*; do
 done;
 
 unset file;
+
+# Neofetch at the end
+[ -x "$(which neofetch)" ] && neofetchnd
