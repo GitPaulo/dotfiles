@@ -2,11 +2,10 @@
 export PATH="$HOME/bin:$PATH";
 
 # Just a check
-red="\033[0;31m"
 shell_type=""
 [[ $- == *i* ]] && shell_type="Interactive" || shell_type="Non Interactive"
 shopt -q login_shell && shell_type="${shell_type} Login Shell" || shell_type="${shell_type} Non Login Shell"
-echo "${red}> $shell_type"
+echo "> $shell_type"
 
 # Modes
 set show-mode-in-prompt on
