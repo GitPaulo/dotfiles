@@ -1,4 +1,5 @@
-" Functions
+"" Functions
+" Check if plugin has loaded
 function! PlugLoaded(name)
   return (
     \ has_key(g:plugs, a:name) &&
@@ -6,39 +7,46 @@ function! PlugLoaded(name)
     \ stridx(&rtp, g:plugs[a:name].dir) >= 0)
 endfunction
 
-"" Highlight insert mode
-:autocmd InsertEnter,InsertLeave * set cul!
+" Toggle between number and relativenumber
+function! ToggleNumber()
+    if(&relativenumber == 1)
+        set norelativenumber
+        set number
+    else
+        set relativenumber
+    endif
+endfunc
 
 "" Config
-set number	" Show line numbers
+set number      " Show line numbers
 set relativenumber " User relative line numbersz
-set linebreak	" Break lines at word (requires Wrap lines)
-set showbreak=+++	" Wrap-broken line prefix
-set textwidth=111	" Line wrap (number of cols)
-set showmatch	" Highlight matching brace
-set spell	" Enable spell-checking
-set virtualedit=block	" Enable free-range cursor
-set visualbell	" Use visual bell (no beeping)
- 
-set hlsearch	" Highlight all search results
-set smartcase	" Enable smart-case search
-set ignorecase	" Always case-insensitive
-set incsearch	" Searches for strings incrementally
- 
-set autoindent	" Auto-indent new lines
-set shiftwidth=4	" Number of auto-indent spaces
-set smartindent	" Enable smart-indent
-set smarttab	" Enable smart-tabs
-set softtabstop=4	" Number of spaces per Tab
- 
-set ruler	" Show row and column ruler information
-set undolevels=1000	" Number of undo levels
-set backspace=indent,eol,start	" Backspace behaviour
+set linebreak   " Break lines at word (requires Wrap lines)
+set showbreak=+++       " Wrap-broken line prefix
+set textwidth=111       " Line wrap (number of cols)
+set showmatch   " Highlight matching brace
+set spell       " Enable spell-checking
+set virtualedit=block   " Enable free-range cursor
+set visualbell  " Use visual bell (no beeping)
+
+set hlsearch    " Highlight all search results
+set smartcase   " Enable smart-case search
+set ignorecase  " Always case-insensitive
+set incsearch   " Searches for strings incrementally
+
+set autoindent  " Auto-indent new lines
+set shiftwidth=4        " Number of auto-indent spaces
+set smartindent " Enable smart-indent
+set smarttab    " Enable smart-tabs
+set softtabstop=4       " Number of spaces per Tab
+
+set ruler       " Show row and column ruler information
+set undolevels=1000     " Number of undo levels
+set backspace=indent,eol,start  " Backspace behaviour
 
 " natural split openings
 set splitbelow
 set splitright
- 
+
 "" Extra
 syntax on # highlight syntax
 let mapleader = ","
@@ -49,7 +57,7 @@ nnoremap j gj
 nnoremap k gk
 
 " highlight last inserted text
-nnoremap gV `[v`] 
+nnoremap gV `[v`]
 
 " save session
 nnoremap <leader>s :mksession<CR>
@@ -60,23 +68,11 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-"" Functions
-" toggle between number and relativenumber
-function! ToggleNumber()
-    if(&relativenumber == 1)
-        set norelativenumber
-        set number
-    else
-        set relativenumber
-    endif
-endfunc
-
 "" Plugins (vim-plug)
 call plug#begin()
 
 " Git and Vim
 Plug 'tpope/vim-fugitive'
-
 " Git gutter (diff)
 Plug 'airblade/vim-gitgutter'
 
@@ -127,7 +123,7 @@ Plug 'https://github.com/tpope/vim-surround.git'
 " Repeat.vim
 Plug 'https://github.com/tpope/vim-repeat.git'
 
-" Themes
+"" Themes
 Plug 'morhetz/gruvbox'
 Plug 'jacoborus/tender.vim'
 Plug 'arcticicestudio/nord-vim'
@@ -162,6 +158,9 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
+" Show hidden files for nerd
+let NERDTreeShowHidden=1
+
 " Floaterm
 nnoremap   <silent>   <F7>    :FloatermNew<CR>
 tnoremap   <silent>   <F7>    <C-\><C-n>:FloatermNew<CR>
@@ -182,17 +181,19 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Post commands (Plugins)
+"" Post commands (Plugins)
 
 " Theme
 syntax enable
 colorscheme pablo
 
 " Gruvbox our real default
-if PlugLoaded('morhetz/gruvbox')
+if PlugLoaded('gruvbox')
     colorscheme gruvbox
 endif
 
+" Highlight insert mode
+:autocmd InsertEnter,InsertLeave * set cul!
+
 " Force transparency
 hi Normal guibg=NONE ctermbg=NONE
-
