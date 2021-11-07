@@ -22,6 +22,7 @@ for file in ~/.bash_profile_*; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
+echo;
 unset file;
 
 # Neofetch at the end
