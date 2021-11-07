@@ -27,3 +27,5 @@ unset file;
 
 # Neofetch at the end
 [ -x "$(which neofetch)" ] && neofetch
+
+[ -s "/home/paulo/.jabba/jabba.sh" ] && source "/home/paulo/.jabba/jabba.sh"
