@@ -25,4 +25,4 @@ done;
 unset file;
 
 # Neofetch at the end
-[ -x "$(which neofetch)" ] && neofetchnd
+[ -x "$(which neofetch)" ] && neofetch
