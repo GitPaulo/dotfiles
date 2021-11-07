@@ -12,6 +12,9 @@ set show-mode-in-prompt on
 set vi-cmd-mode-string "\1\e[2 q\2"
 set vi-ins-mode-string "\1\e[6 q\2"
 
+# My bashrc before profiles (dependant on some installation sources)
+[ -n "$PS1" ] && source ~/.bashrc
+
 # Source bash_profile_ files
 for file in ~/.bash_profile_*; do
 	echo $file
