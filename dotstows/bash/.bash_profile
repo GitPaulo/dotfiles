@@ -5,7 +5,7 @@ export PATH="$HOME/bin:$PATH";
 shell_type=""
 [[ $- == *i* ]] && shell_type="Interactive" || shell_type="Non Interactive"
 shopt -q login_shell && shell_type="${shell_type} Login Shell" || shell_type="${shell_type} Non Login Shell"
-echo "[$shell_type]\n"
+echo -e "[$shell_type]\n"
 
 # Modes
 set show-mode-in-prompt on
