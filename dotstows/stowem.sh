@@ -9,7 +9,7 @@ then
 fi
 
 echo 'Removing default dotfiles...'
-rm ~/.bash_profile ~/.bashrc ~/.curlrc ~/.gitconfig ~/.vimrc ~/.wgetrc ~/.config/neofetch/config.conf ~/.config/fish/config.fish ~/.config/ranger/rc.conf
+rm ~/.bash_profile ~/bash_profile_* ~/.bashrc ~/.bash_it ~/.curlrc ~/.gitconfig ~/.vimrc ~/.wgetrc ~/.config/neofetch/config.conf ~/.config/fish/config.fish ~/.config/ranger/rc.conf
 
 echo 'Stowing dem new ones...'
 for stowDir in */; do
