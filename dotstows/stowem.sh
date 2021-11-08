@@ -3,7 +3,7 @@
 # env=home,work
 env=$1
 
-if [ -z "$var" ]
+if [ -z "$env" ]
 then
   echo 'Environment argument required. (home/work)' && exit;
 fi
