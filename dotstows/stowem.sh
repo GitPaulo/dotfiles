@@ -3,8 +3,13 @@
 # env=home,work
 env=$1
 
+if [ -z "$var" ]
+then
+  echo 'Environment argument required. (home/work)' && exit;
+fi
+
 echo 'Removing default dotfiles...'
-rm ~/.bash_profile ~/.bashrc ~/.curlrc ~/.gitconfig ~/.vimrc ~/.wgetrc ~/.config/neofetch/config.conf ~/.config/fish/config.fish ~/.config/ranger/rc.conf ~/.config/ranger/commands.py
+rm ~/.bash_profile ~/.bashrc ~/.curlrc ~/.gitconfig ~/.vimrc ~/.wgetrc ~/.config/neofetch/config.conf ~/.config/fish/config.fish ~/.config/ranger/rc.conf
 
 echo 'Stowing dem new ones...'
 for stowDir in */; do
