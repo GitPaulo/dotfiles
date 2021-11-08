@@ -1,3 +1,3 @@
 #!/bin/bash
 
-pip3 install thefuck --user
+sudo pip3 install thefuck --user
