@@ -4,7 +4,7 @@
 env=$1
 
 echo 'Removing default dotfiles...'
-rm ~/.bash_profile ~/.bashrc ~/.curlrc ~/.gitconfig ~/.vimrc ~/.wgetrc ~/.config/neofetch/config.conf ~/.config/fish/config.fish ~/.config/ranger/rc.conf
+rm ~/.bash_profile ~/.bashrc ~/.curlrc ~/.gitconfig ~/.vimrc ~/.wgetrc ~/.config/neofetch/config.conf ~/.config/fish/config.fish ~/.config/ranger/rc.conf ~/.config/ranger/commands.py
 
 echo 'Stowing dem new ones...'
 for stowDir in */; do
