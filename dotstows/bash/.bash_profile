@@ -14,18 +14,3 @@ set vi-ins-mode-string "\1\e[6 q\2"
 
 # My bashrc before profiles (dependant on some installation sources)
 [ -n "$PS1" ] && source ~/.bashrc
-
-# Source bash_profile_ files
-echo '[Profile Modules]'
-for file in ~/.bash_profile_*; do
-	echo $file
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-
-echo;
-unset file;
-
-# Neofetch at the end
-[ -x "$(which neofetch)" ] && neofetch
-
-[ -s "/home/paulo/.jabba/jabba.sh" ] && source "/home/paulo/.jabba/jabba.sh"

@@ -23,7 +23,6 @@ alias r="ranger"
 alias r.="ranger ."
 
 # starship
-alias bashship='eval "$(starship init bash)"'
 alias fishship='starship init fish | source'
 
 # IP addresses
