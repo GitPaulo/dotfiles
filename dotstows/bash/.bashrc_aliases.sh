@@ -19,13 +19,30 @@ alias ll="la"
 
 # fzf & vim & ranger
 alias f="fzf"
+alias f.="fzf ."
 alias v="vim"
 alias v.="vim ."
 alias r="ranger"
 alias r.="ranger ."
 
+# cheat.sh & bro
+alias b="bro"
+alias c="cht.sh"
+alias cheat="cheat.sh"
+alias cheat.sh="cht.sh"
+
 # starship
 alias fishship='starship init fish | source'
+
+# tmux
+alias t="tmux"
+
+# fuck
+alias thefuck="fuck"
+alias theshit="fuck"
+alias shit="fuck"
+alias fixpls="fuck"
+alias fix="fuck"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
