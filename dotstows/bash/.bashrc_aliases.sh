@@ -3,6 +3,7 @@
 # (Overwrites)
 alias ls="exa"
 alias diff="colordiff"
+alias cat="bat"
 
 # Easier navigation
 alias ..="cd .."
