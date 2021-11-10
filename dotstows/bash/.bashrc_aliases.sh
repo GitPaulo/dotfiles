@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# (Overwrites)
+alias ls="exa"
+alias diff="colordiff"
+
 # Easier navigation
 alias ..="cd .."
 alias ...="cd ../.."
