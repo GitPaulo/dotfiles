@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo apt install ranger
+sudo apt install ranger -y
 

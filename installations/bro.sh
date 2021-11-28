@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo gem install bropages
+sudo gem install bropages -y

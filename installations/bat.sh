@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo apt install bat
+sudo apt install bat -y
 

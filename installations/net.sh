@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo apt install net-tools
-sudo apt install ifconfig
+sudo apt install net-tools -y
+sudo apt install ifconfig -y

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo apt install dos2unix
+sudo apt install dos2unix -y

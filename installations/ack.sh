@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo apt install ack
+sudo apt install ack -y

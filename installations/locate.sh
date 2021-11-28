@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo apt install mlocate
+sudo apt install mlocate -y
