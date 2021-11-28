@@ -3,7 +3,9 @@
 # (Overwrites)
 alias ls="exa"
 alias diff="colordiff"
-alias cat="bat"
+
+# Required on debian based
+alias bat="batcat"
 
 # Easier navigation
 alias ..="cd .."
