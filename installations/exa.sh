@@ -9,4 +9,4 @@ cargo build --release && cargo test #cargo test is optional
 sudo install target/release/exa /usr/local/bin/exa
 cd ..
 rm -rf exa
-sudo apt purge --autoremove
+sudo apt purge --autoremove -y
