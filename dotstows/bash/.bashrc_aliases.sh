@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
-# (Overwrites)
+# Overwrites
 alias ls="exa"
 alias diff="colordiff"
-
-# Required on debian based
-alias bat="batcat"
 
 # Easier navigation
 alias ..="cd .."
@@ -23,6 +20,9 @@ alias la="ls -lAF ${colorflag}" # List all files colorized in long format, exclu
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'" # List only directories
 alias ls="command ls ${colorflag}" # Always use color output for `ls`
 alias ll="la"
+
+# bat: required on debian based
+alias bat="batcat"
 
 # fzf & vim & ranger
 alias f="fzf"
@@ -55,6 +55,9 @@ alias fix="fuck"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# Shutdown now!
+alias shutnow="sudo shutdown now"
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec ${SHELL} -l"

@@ -1,4 +1,11 @@
-# Source bashrc_ files
+#       __               __             
+#      / /_  ____ ______/ /_  __________
+#     / __ \/ __ `/ ___/ __ \/ ___/ ___/
+#  _ / /_/ / /_/ (__  ) / / / /  / /__  
+# (_)_.___/\__,_/____/_/ /_/_/   \___/
+# paulo's
+
+# source bashrc_ files
 echo '[Profile Modules]'
 for file in ~/.bashrc_*; do
 	echo $file
@@ -8,11 +15,7 @@ done;
 echo;
 unset file;
 
-# Default editor
-export VISUAL=vim;
-export EDITOR=vim;
-
-# Last things
 [ -x "$(which neofetch)" ] && neofetch
 
+# shell prompt (starship)
 eval "$(starship init bash)"
