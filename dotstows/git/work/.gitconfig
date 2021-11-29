@@ -2,6 +2,8 @@
 
 	# Better logging with color and 30 num
 	l = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
 
 	# View the current working tree status using the short format.
 	s = status -s
@@ -72,7 +74,7 @@
 
 	# Show the user email for the current repository.
 	whoami = config user.email
-	
+
 [apply]
 
 	# Detect whitespace errors when applying a patch.
