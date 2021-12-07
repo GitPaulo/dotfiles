@@ -17,4 +17,4 @@ git clone https://github.com/GitPaulo/dotfiles.git ~/dotfiles
 ```
 
 *If using WSL make sure opening terminal as login shell \
-*Tested on Debian based distros
+*for Debian based distros only
