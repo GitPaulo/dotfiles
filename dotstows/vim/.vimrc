@@ -43,6 +43,9 @@ set ruler       " Show row and column ruler information
 set undolevels=1000     " Number of undo levels
 set backspace=indent,eol,start  " Backspace behaviour
 
+" allow mouse
+set mouse=a
+
 " natural split openings
 set splitbelow
 set splitright
