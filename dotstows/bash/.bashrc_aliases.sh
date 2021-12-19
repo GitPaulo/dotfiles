@@ -3,6 +3,7 @@
 # Overwrites
 alias ls="exa"
 alias diff="colordiff"
+alias grep="grep --color"
 
 # Easier navigation
 alias ..="cd .."
