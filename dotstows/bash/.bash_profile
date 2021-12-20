@@ -4,6 +4,7 @@
 export PATH="$HOME/bin:$PATH";
 export VISUAL=vim;
 export EDITOR=vim;
+export FZF_DEFAULT_COMMAND="find -L"
 
 # Modes
 set show-mode-in-prompt on
