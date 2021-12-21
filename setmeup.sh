@@ -7,8 +7,7 @@ function installations () {
   cd "${DOTFILES}/installations" || exit
   for installation in ./*.sh; do
     read -p "Run installation: '${installation}'? [y/n]"$'\n' -n 1 -r
-    if [[ ! $REPLY =~ ^[Yy]$ ]]
-    then
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
       echo -e "Skipped installation...\n"
     else
       echo
