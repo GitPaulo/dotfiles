@@ -7,9 +7,9 @@ if [ -z "$env" ]; then
   echo 'Environment argument required. (home/work)' && exit;
 fi
 
-echo 'Removing default dotfiles...'
+echo 'Unstowing...'
 for stowDir in */; do
-  echo "<-- Unstowing ${stowDir}"
+  echo "🗑 Unstowing ${stowDir}"
   stow -D "$stowDir"
   
   if [ $? -eq 0 ]; then
@@ -25,7 +25,7 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]; then
   exit
 fi  
 
-echo 'Stowing dem new ones...'
+echo -e 'Stowing...'
 for stowDir in */; do
   stowDirPath="./${stowDir}${env}"
   if [ -d "$stowDirPath" ]; then
