@@ -32,11 +32,11 @@ options=("home" "work" "quit")
 select env in "${options[@]}"; do
   case $env in
   "home")
-    echo "Starting setup for home environmment..."
+    echo "Starting setup for 'home' environmment."
     break
     ;;
   "work")
-    echo "Starting setup for work environmment."
+    echo "Starting setup for 'work' environmment."
     break
     ;;
   "quit")
@@ -52,7 +52,7 @@ case ${answer:0:1} in
         installations $env; 
     ;;
     * )
-        echo -e "Skipped installations...\n"
+        echo "Skipped installations..."
     ;;
 esac
 
@@ -62,7 +62,7 @@ case ${answer2:0:1} in
         stowem $env;
     ;;
     * )
-        echo -e "Skipped stows...\n"
+        echo "Skipped stows..."
     ;;
 esac
 
@@ -72,6 +72,6 @@ case ${answer3:0:1} in
         postsetups $env;
     ;;
     * )
-        echo -e "Skipped post-setups...\n"
+        echo "Skipped post-setups..."
     ;;
 esac
