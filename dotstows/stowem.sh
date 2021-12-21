@@ -19,7 +19,7 @@ for stowDir in */; do
   fi
 done
 
-read -n 1 -p "Stow (y/n)? " answer
+read -n 1 -p "Stow (y/n)? " answer; echo
 if [[ ! $answer =~ ^[Yy]$ ]]; then
   echo -e "Did not stow. Exiting..."
   exit
