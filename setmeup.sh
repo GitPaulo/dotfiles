@@ -26,6 +26,9 @@ function stowem () {
 function postsetups() {
   vim +'PlugInstall --sync' +qa
   echo "Ignore .vimrc erorrs, installed plugins restart vim!"
+  # PLEASE FIX THIS EVENTUALLY
+  echo "Tmux conf file Dos issue patch..."
+  dos2unix ./dotstows/tmux/.tmux.conf
 }
 
 options=("home" "work" "quit")
