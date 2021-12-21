@@ -30,11 +30,11 @@ for stowDir in */; do
   stowDirPath="./${stowDir}${env}"
   if [ -d "$stowDirPath" ]; then
     cd "$stowDir" || exit
-    echo "--> Stowing ${stowDirPath} for env '${env}'..."
+    echo "--> Stowing ${stowDir} for env '${env}'..."
     stow -vSt ~ "$env"
     cd - || exit
   else
-    echo "--> Stowing ${stowDirPath} without env..."
+    echo "--> Stowing ${stowDir} without env..."
     stow -vSt ~ "$stowDir"
   fi
 
