@@ -8,7 +8,7 @@ if [ -z "$env" ]; then
 fi
 
 read -n 1 -p "Unstow (y/n)? " answer1; echo
-if [[ $answer1 -eq ^[Yy]$ ]]; then
+if [[ $answer1 =~ ^[Yy]$ ]]; then
   echo 'Unstowing...'
   
   for stowDir in */; do
@@ -24,7 +24,7 @@ if [[ $answer1 -eq ^[Yy]$ ]]; then
 fi  
 
 read -n 1 -p "Stow (y/n)? " answer2; echo
-if [[ $answer2 -eq ^[Yy]$ ]]; then
+if [[ $answer2 =~ ^[Yy]$ ]]; then
   echo -e 'Stowing...'
   
   for stowDir in */; do
