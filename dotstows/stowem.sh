@@ -3,20 +3,27 @@
 # env=home,work
 env=$1
 
-if [ -z "$env" ]
-then
+if [ -z "$env" ]; then
   echo 'Environment argument required. (home/work)' && exit;
 fi
 
 echo 'Removing default dotfiles...'
-rm ~/.bash_profile ~/.bash_profile_aliases ~/.bash_profile_functions ~/.bashrc \
-~/.curlrc \ 
-~/.gitconfig \
-~/.vimrc \
-~/.wgetrc \
-~/.config/neofetch/config.conf \
-~/.config/fish/config.fish \
-~/.config/ranger/rc.conf;
+for stowDir in */; do
+  echo "<-- Unstowing ${stowDir}"
+  stow -D "$stowDir"
+  
+  if [ $? -eq 0 ]; then
+    echo OK
+  else
+    echo FAIL
+  fi
+done
+
+read -p "Stow? [y/n]"$'\n' -n 1 -r
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+  echo -e "Did not stow. Exiting..."
+  exit
+fi  
 
 echo 'Stowing dem new ones...'
 for stowDir in */; do
