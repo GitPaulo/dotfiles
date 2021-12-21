@@ -9,7 +9,7 @@ fi
 
 echo 'Unstowing...'
 for stowDir in */; do
-  echo "🗑 Unstowing ${stowDir}"
+  echo "🗑️ Unstowing ${stowDir}"
   stow -D "$stowDir"
   
   if [ $? -eq 0 ]; then
@@ -19,8 +19,8 @@ for stowDir in */; do
   fi
 done
 
-read -p "Stow? [y/n]"$'\n' -n 1 -r
-if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+read -n 1 -p "Stow (y/n)? " answer
+if [[ ! $answer =~ ^[Yy]$ ]]; then
   echo -e "Did not stow. Exiting..."
   exit
 fi  
