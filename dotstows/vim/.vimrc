@@ -1,3 +1,6 @@
+"" Required
+set encoding=utf-8
+
 "" Functions
 " Check if plugin has loaded
 function! PlugLoaded(name)
