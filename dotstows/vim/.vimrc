@@ -74,6 +74,9 @@ nnoremap <C-H> <C-W><C-H>
 "" Plugins (vim-plug)
 call plug#begin()
 
+" YCM
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
 " Git and Vim
 Plug 'tpope/vim-fugitive'
 " Git gutter (diff)
