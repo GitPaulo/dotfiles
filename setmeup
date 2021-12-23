@@ -13,7 +13,8 @@ function installations () {
   for installation in ./*; do
     # Run all
     if [ $2 ]; then
-      ./"$installation" $1 && continue
+      ./"$installation" $1
+      continue
     fi
     # Prompt run
     read -p "Run installation: '${installation}'? [y/n]"$'\n' -n 1 -r && echo;
