@@ -5,16 +5,6 @@
 # (_)_.___/\__,_/____/_/ /_/_/   \___/
 # paulo's
 
-# source bashrc_ files
-echo '[Profile Modules]'
-for file in ~/.bash_*; do
-	echo $file
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-
-echo;
-unset file;
-
 [ -x "$(which neofetch)" ] && neofetch
 
 # shell prompt (starship)
