@@ -69,7 +69,6 @@ case ${answer2:0:1} in
     ;;
 esac
 
-
 read -p "🚀 Run installations? [y/n/a]"$'\n' answer
 case ${answer:0:1} in
     y|Y )
