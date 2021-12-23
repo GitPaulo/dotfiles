@@ -29,7 +29,7 @@ function installations () {
 
 function stowem () {
   cd "${DOTFILES}/dotstows" || exit
-  echo "Installing stow..."
+  echo "Checking for stow..."
   if ! command -v stow &> /dev/null; then
     sudo apt update
     sudo apt install stow -y || exit

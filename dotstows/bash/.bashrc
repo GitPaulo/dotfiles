@@ -7,7 +7,7 @@
 
 # source bashrc_ files
 echo '[Profile Modules]'
-for file in ~/.bashrc_*; do
+for file in ~/.bash_*; do
 	echo $file
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
