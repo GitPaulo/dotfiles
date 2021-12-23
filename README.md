@@ -13,7 +13,7 @@ My dotfiles and new workspace installation scripts.
 
 ```sh
 git clone https://github.com/GitPaulo/dotfiles.git ~/dotfiles
-~/dotfiles/setmeup.sh
+~/dotfiles/setmeup
 ```
 
 *If using WSL make sure opening terminal as login shell \

@@ -5,11 +5,16 @@ export DOTFILES=~/dotfiles
 
 function installations () {
   cd "${DOTFILES}/installations" || exit
-  for installation in ./*.sh; do
-    # 0.sh is required stuff
-    if [ $installation == "./0.sh" ]; then
+  for installation in ./*; do
+    # 0 file is required stuff
+    if [ $installation == "./0" ]; then
       ./"$installation" $1 && continue
     fi
+    # Run all
+    if [ $2 ]; then
+      ./"$installation" $1 && continue
+    fi
+    # Prompt run
     read -p "Run installation: '${installation}'? [y/n]"$'\n' -n 1 -r && echo;
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
       echo "Skipped installation..."
@@ -22,7 +27,7 @@ function installations () {
 
 function stowem () {
   cd "${DOTFILES}/dotstows" || exit
-  ./stowem.sh $1
+  ./stowem $1
   cd -
 }
 
@@ -49,17 +54,20 @@ select env in "${envs[@]}"; do
   esac
 done
 
-read -p "Run installations? [y/n]"$'\n' answer
+read -p "🚀 Run installations? [y/n/a]"$'\n' answer
 case ${answer:0:1} in
     y|Y )
         installations $env; 
+    ;;
+    a|A )
+        installations $env true;
     ;;
     * )
         echo "Skipped installations..."
     ;;
 esac
 
-read -p "Run stows? [y/n] "$'\n' answer2
+read -p "🔗 Run stows? [y/n] "$'\n' answer2
 case ${answer2:0:1} in
     y|Y )
         stowem $env;
@@ -69,7 +77,7 @@ case ${answer2:0:1} in
     ;;
 esac
 
-read -p "Run post-setups? [y/n] "$'\n' answer3
+read -p "⚙️ Run post-setups? [y/n] "$'\n' answer3
 case ${answer3:0:1} in
     y|Y )
         postsetups $env;
