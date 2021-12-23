@@ -34,8 +34,9 @@ function postsetups() {
   dos2unix ./dotstows/tmux/.tmux.conf
 }
 
-options=("home" "work" "quit")
-select env in "${options[@]}"; do
+envs=("home" "work")
+echo "Choose environment:"
+select env in "${envs[@]}"; do
   case $env in
   "home")
     echo "Starting setup for 'home' environmment."
@@ -45,10 +46,6 @@ select env in "${options[@]}"; do
     echo "Starting setup for 'work' environmment."
     break
     ;;
-  "quit")
-    exit
-    ;;
-  *) echo "Invalid environment option!" ;;
   esac
 done
 
