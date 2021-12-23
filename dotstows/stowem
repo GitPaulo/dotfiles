@@ -7,6 +7,16 @@ if [ -z "$env" ]; then
   echo 'Environment argument required. (home/work)' && exit;
 fi
 
+# Remove default files
+echo '⚠️ Stow is unable to overwrite source files. You may have to remove defaults manually before running stow.'
+read -p "Remove defaults: '${installation}'? [y/n]"$'\n' -n 1 -r && echo;
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+  echo "⚠️ Skipped defaults removal..."
+else
+  # TODO: Add more? (expand a bit?)
+  rm .bashrc
+fi
+
 read -n 1 -p "Unstow (y/n)? " answer1; echo
 if [[ $answer1 =~ ^[Yy]$ ]]; then
   echo 'Unstowing...'
