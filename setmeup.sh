@@ -6,11 +6,14 @@ export DOTFILES=~/dotfiles
 function installations () {
   cd "${DOTFILES}/installations" || exit
   for installation in ./*.sh; do
-    read -p "Run installation: '${installation}'? [y/n]"$'\n' -n 1 -r
+    # 0.sh is required stuff
+    if [ $installation == "./0.sh" ]; then
+      ./"$installation" $1 && continue
+    fi
+    read -p "Run installation: '${installation}'? [y/n]"$'\n' -n 1 -r && echo;
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-      echo -e "Skipped installation...\n"
+      echo "Skipped installation..."
     else
-      echo
       ./"$installation" $1
     fi
   done
@@ -20,7 +23,7 @@ function installations () {
 function stowem () {
   cd "${DOTFILES}/dotstows" || exit
   ./stowem.sh $1
-  cd - || exit
+  cd -
 }
 
 function postsetups() {
