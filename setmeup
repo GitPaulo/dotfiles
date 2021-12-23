@@ -31,7 +31,7 @@ function stowem () {
   cd -
 }
 
-function postsetups() {
+function postinstallations() {
   vim +'PlugInstall --sync' +qa
   echo "Ignore .vimrc erorrs, installed plugins restart vim!"
   # PLEASE FIX THIS EVENTUALLY
@@ -54,6 +54,17 @@ select env in "${envs[@]}"; do
   esac
 done
 
+read -p "🔗 Run stows? [y/n] "$'\n' answer2
+case ${answer2:0:1} in
+    y|Y )
+        stowem $env;
+    ;;
+    * )
+        echo "Skipped stows..."
+    ;;
+esac
+
+
 read -p "🚀 Run installations? [y/n/a]"$'\n' answer
 case ${answer:0:1} in
     y|Y )
@@ -67,22 +78,12 @@ case ${answer:0:1} in
     ;;
 esac
 
-read -p "🔗 Run stows? [y/n] "$'\n' answer2
-case ${answer2:0:1} in
-    y|Y )
-        stowem $env;
-    ;;
-    * )
-        echo "Skipped stows..."
-    ;;
-esac
-
-read -p "⚙️ Run post-setups? [y/n] "$'\n' answer3
+read -p "⚙️ Run post-installations? [y/n] "$'\n' answer3
 case ${answer3:0:1} in
     y|Y )
-        postsetups $env;
+        postinstallations $env;
     ;;
     * )
-        echo "Skipped post-setups..."
+        echo "Skipped post-installations..."
     ;;
 esac
