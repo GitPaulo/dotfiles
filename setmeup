@@ -30,8 +30,10 @@ function installations () {
 function stowem () {
   cd "${DOTFILES}/dotstows" || exit
   echo "Installing stow..."
-  sudo apt update
-  sudo apt install stow -y || exit
+  if ! command -v stow &> /dev/null; then
+    sudo apt update
+    sudo apt install stow -y || exit
+  fi
   ./stowem $1
   cd -
 }
