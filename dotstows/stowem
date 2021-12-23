@@ -32,11 +32,11 @@ if [[ $answer2 =~ ^[Yy]$ ]]; then
     if [ -d "$stowDirPath" ]; then
       cd "$stowDir" || exit
       echo "--> Stowing ${stowDir} for env '${env}'..."
-      stow -vSt ~ "$env"
+      stow -vSt ~ "$env" --adopt
       cd - || exit
     else
       echo "--> Stowing ${stowDir} without env..."
-      stow -vSt ~ "$stowDir"
+      stow -vSt ~ "$stowDir" --adopt
     fi
 
     if [ $? -eq 0 ]; then
