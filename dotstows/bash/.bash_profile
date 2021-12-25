@@ -17,13 +17,13 @@ no_color='\033[0m'
 echo -e "\n${red}Profile Modules${no_color}"
 for file in ~/.bash_*; do
 	[ -L "$file" ] || continue
-        [[ $file == *bash_profile ]] && continue
-        echo -e " • $file"
-        [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
+	[[ $file == *bash_profile ]] && continue
+	echo -e " • $file"
+	[ -r "$file" ] && [ -f "$file" ] && source "$file"
+done
 
-echo;
-unset file;
+echo
+unset file
 
-# Now load bashrc 
+# Now load bashrc
 [ -n "$PS1" ] && source ~/.bashrc

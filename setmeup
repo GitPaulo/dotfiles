@@ -3,93 +3,93 @@
 
 export DOTFILES=~/dotfiles
 
-function installations () {
-  cd "${DOTFILES}/installations" || exit
-  # Update first
-  echo "Making sure we good..."
-  sudo apt update
-  sudo apt upgrade -y
-  # Installations
-  for installation in ./*; do
-    # Run all
-    if [ $2 ]; then
-      ./"$installation" $1
-      continue
-    fi
-    # Prompt run
-    read -p "Run installation: '${installation}'? [y/n]"$'\n' -n 1 -r && echo;
-    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-      echo "Skipped installation..."
-    else
-      ./"$installation" $1
-    fi
-  done
-  cd - || exit
+function installations() {
+	cd "${DOTFILES}/installations" || exit
+	# Update first
+	echo "Making sure we good..."
+	sudo apt update
+	sudo apt upgrade -y
+	# Installations
+	for installation in ./*; do
+		# Run all
+		if [ $2 ]; then
+			./"$installation" $1
+			continue
+		fi
+		# Prompt run
+		read -p "Run installation: '${installation}'? [y/n]"$'\n' -n 1 -r && echo
+		if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+			echo "Skipped installation..."
+		else
+			./"$installation" $1
+		fi
+	done
+	cd - || exit
 }
 
-function stowem () {
-  cd "${DOTFILES}/dotstows" || exit
-  echo "Checking for stow..."
-  if ! command -v stow &> /dev/null; then
-    sudo apt update
-    sudo apt install stow -y || exit
-  fi
-  ./stowem $1
-  cd -
+function stowem() {
+	cd "${DOTFILES}/dotstows" || exit
+	echo "Checking for stow..."
+	if ! command -v stow &>/dev/null; then
+		sudo apt update
+		sudo apt install stow -y || exit
+	fi
+	./stowem $1
+	cd -
 }
 
 function postinstallations() {
-  vim +'PlugInstall --sync' +qa
-  echo "Ignore .vimrc erorrs, installed plugins restart vim!"
-  # PLEASE FIX THIS EVENTUALLY
-  echo "Tmux conf file Dos issue patch..."
-  dos2unix "$DOTFILES/dotstows/tmux/.tmux.conf"
+	vim +'PlugInstall --sync' +qa
+	echo "Ignore .vimrc erorrs, installed plugins restart vim!"
+	# PLEASE FIX THIS EVENTUALLY
+	echo "Tmux conf file Dos issue patch..."
+	dos2unix "$DOTFILES/dotstows/tmux/.tmux.conf"
 }
 
 envs=("home" "work")
 echo "Choose environment:"
 select env in "${envs[@]}"; do
-  case $env in
-  "home")
-    echo "Starting setup for 'home' environmment."
-    break
-    ;;
-  "work")
-    echo "Starting setup for 'work' environmment."
-    break
-    ;;
-  esac
+	case $env in
+	"home")
+		echo "Starting setup for 'home' environmment."
+		break
+		;;
+	"work")
+		echo "Starting setup for 'work' environmment."
+		break
+		;;
+	esac
 done
 
 read -p "🔗 Run stows? [y/n] "$'\n' answer2
 case ${answer2:0:1} in
-    y|Y )
-        stowem $env;
-    ;;
-    * )
-        echo "Skipped stows..."
-    ;;
+y | Y)
+	stowem $env
+	;;
+*)
+	echo "Skipped stows..."
+	;;
 esac
 
 read -p "🚀 Run installations? [y/n/a]"$'\n' answer
 case ${answer:0:1} in
-    y|Y )
-        installations $env; 
-    ;;
-    a|A )
-        installations $env true;
-    ;;
-    * )
-        echo "Skipped installations..."
-    ;;
+y | Y)
+	installations $env
+	;;
+a | A)
+	installations $env true
+	;;
+*)
+	echo "Skipped installations..."
+	;;
 esac
 
 read -p "⚙️ Run post-installations? [y/n] "$'\n' answer3
 case ${answer3:0:1} in
-    y|Y )
-        postinstallations $env;
-    ;;
-    * )
-        echo "Skipped post-installations..."
-    ;;
+y | Y)
+	postinstallations $env
+	;;
+*)
+	echo "Skipped post-installations..."
+	;;
 esac

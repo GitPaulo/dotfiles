@@ -4,23 +4,23 @@
 
 # Create a new directory and enter it
 function mkdircd() {
-	mkdir -p "$@" && cd "$_";
+	mkdir -p "$@" && cd "$_"
 }
 
 # Create a data URL from a file
 function dataurl() {
-	local mimeType=$(file -b --mime-type "$1");
+	local mimeType=$(file -b --mime-type "$1")
 	if [[ $mimeType == text/* ]]; then
-		mimeType="${mimeType};charset=utf-8";
+		mimeType="${mimeType};charset=utf-8"
 	fi
-	echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')";
+	echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')"
 }
 
 # Weird ones
-function vf () {
-  vim $(fzf);
+function vf() {
+	vim $(fzf)
 }
 
-function vfh () {
+function vfh() {
 	vimg $(fzf --hidden)
 }

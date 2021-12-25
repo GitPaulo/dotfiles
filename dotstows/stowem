@@ -4,12 +4,12 @@
 env=$1
 
 if [ -z "$env" ]; then
-  echo 'Environment argument required. (home/work)' && exit;
+  echo 'Environment argument required. (home/work)' && exit
 fi
 
 # Remove default files
 echo '⚠️ Stow is unable to overwrite source files. You may have to remove defaults manually before running stow.'
-read -p "Remove defaults? [y/n]"$'\n' -n 1 -r && echo;
+read -p "Remove defaults? [y/n]"$'\n' -n 1 -r && echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
   echo "⚠️ Skipped defaults removal..."
 else
@@ -17,10 +17,11 @@ else
   rm ~/.bashrc
 fi
 
-read -n 1 -p "Unstow (y/n)? " answer1; echo
+read -n 1 -p "Unstow (y/n)? " answer1
+echo
 if [[ $answer1 =~ ^[Yy]$ ]]; then
   echo 'Unstowing...'
-  
+
   for stowDir in */; do
     echo "🗑️ Unstowing ${stowDir}"
     stow -D "$stowDir"
@@ -31,12 +32,13 @@ if [[ $answer1 =~ ^[Yy]$ ]]; then
       echo FAIL
     fi
   done
-fi  
+fi
 
-read -n 1 -p "Stow (y/n)? " answer2; echo
+read -n 1 -p "Stow (y/n)? " answer2
+echo
 if [[ $answer2 =~ ^[Yy]$ ]]; then
   echo -e 'Stowing...'
-  
+
   for stowDir in */; do
     stowDirPath="./${stowDir}${env}"
     if [ -d "$stowDirPath" ]; then
@@ -54,5 +56,5 @@ if [[ $answer2 =~ ^[Yy]$ ]]; then
     else
       echo FAIL
     fi
-done
-fi  
+  done
+fi
