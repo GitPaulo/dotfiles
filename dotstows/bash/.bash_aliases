@@ -33,9 +33,8 @@ alias v.="vim ."
 alias r="ranger"
 alias r.="ranger ."
 
-# cheat.sh & bro
-alias b="bro"
-alias c="cht.sh"
+# cheat.sh
+alias cht="cht.sh"
 alias cheat="cheat.sh"
 alias cheat.sh="cht.sh"
 
