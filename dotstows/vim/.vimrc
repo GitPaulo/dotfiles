@@ -67,6 +67,19 @@ set splitright
 syntax on # highlight syntax
 let mapleader = ","
 
+"" Cursor
+" Reference chart of values:
+"   Ps = 0  -> blinking block.
+"   Ps = 1  -> blinking block (default).
+"   Ps = 2  -> steady block.
+"   Ps = 3  -> blinking underline.
+"   Ps = 4  -> steady underline.
+"   Ps = 5  -> blinking bar (xterm).
+"   Ps = 6  -> steady bar (xterm).
+let &t_SI.="\e[6 q" "SI = INSERT mode
+let &t_SR.="\e[4 q" "SR = REPLACE mode
+let &t_EI.="\e[2 q" "EI = NORMAL mode (ELSE)
+
 "" Mappings
 " move vertically by visual line
 nnoremap j gj
@@ -87,11 +100,15 @@ nnoremap <C-H> <C-W><C-H>
 "" Plugins (vim-plug)
 call plug#begin()
 
+" Surround
+Plug 'tpope/vim-surround'
+
 " YCM
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
-" Git and Vim
+" Git
 Plug 'tpope/vim-fugitive'
+
 " Git gutter (diff)
 Plug 'airblade/vim-gitgutter'
 
