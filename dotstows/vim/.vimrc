@@ -100,6 +100,12 @@ nnoremap <C-H> <C-W><C-H>
 "" Plugins (vim-plug)
 call plug#begin()
 
+" Start screen
+Plug 'mhinz/vim-startify'
+
+" Dev icons
+Plug 'ryanoasis/vim-devicons'
+
 " Surround
 Plug 'tpope/vim-surround'
 
@@ -147,8 +153,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Tree explorer
+" NERD Tree
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Floaterm
 Plug 'voldikss/vim-floaterm'
