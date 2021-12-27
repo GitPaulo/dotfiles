@@ -103,8 +103,8 @@ call plug#begin()
 " Surround
 Plug 'tpope/vim-surround'
 
-" YCM
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+" YCM (Tabnine fork)
+Plug 'tabnine/YouCompleteMe', { 'do': function('BuildYCM') }
 
 " Git
 Plug 'tpope/vim-fugitive'
