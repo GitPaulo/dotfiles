@@ -1,0 +1,10 @@
+#!/bin/bash
+wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/z.sh
+
+echo -n "Append z to .bashrc? [y/n]?"
+read answer
+
+if [ "$answer" != "${answer#[Yy]}" ] ;then # this grammar (the #[] operator) means that the variable $answer where any Y or y in 1st position will be dropped if they exist.
+    echo . ~/z.sh >> ~/.bashrc
+    echo '.bashrc appended!'
+fi
