@@ -12,4 +12,4 @@ sudo install target/release/exa /usr/local/bin/exa
 cd ..
 rm -rf exa
 sudo apt purge --autoremove -y
-cd cdir
+cd "$cdir"
