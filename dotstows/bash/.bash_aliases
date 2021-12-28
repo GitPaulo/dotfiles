@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # Overwrites
-alias ls="exa"
 alias diff="colordiff"
 alias grep="grep --color"
 
@@ -22,8 +21,12 @@ alias lsd="ls -lF ${colorflag} | grep --color=never '^d'" # List only directorie
 alias ls="command ls ${colorflag}"                        # Always use color output for `ls`
 alias ll="la"
 
+# exa
+alias le="exa --all --long --header --git --sort=modified"
+
 # bat: required on debian based
 alias bat="batcat"
+alias bats="batcat --list-languages"
 
 # fzf & vim & ranger
 alias f="fzf"
