@@ -4,6 +4,7 @@ My dotfiles and new workspace installation scripts.
 **TODO:**
 - Work on improving configurations in general
 - Test robustness of scripts sometime... lol
+- https://github.com/pystardust/ani-cli
 
 ## Usage
 
