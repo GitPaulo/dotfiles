@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # from source..
+cdir=$(pwd)
+cd ~
 sudo apt install libgit2-dev rustc -y
 sudo apt-mark auto rustc
 git clone https://github.com/ogham/exa --depth=1
@@ -10,3 +12,4 @@ sudo install target/release/exa /usr/local/bin/exa
 cd ..
 rm -rf exa
 sudo apt purge --autoremove -y
+cd cdir
