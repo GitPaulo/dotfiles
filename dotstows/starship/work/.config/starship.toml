@@ -1,5 +1,9 @@
 # ~/.config/starship.toml
 
+# Work configs
+scan_timeout = 90
+command_timeout = 2000
+
 [battery]
 full_symbol = "🔋 "
 discharging_symbol = "🔌 "
