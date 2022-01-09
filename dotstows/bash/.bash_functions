@@ -18,7 +18,7 @@ function dataurl() {
 
 # Never again use another way :D
 function timetoswitch() {
-        [ -z "$1" ] && echo 'Branch name required.' && exit 1
+        [ -z "$1" ] && echo 'Branch name required.' && return 1
         echo "⸙ $(git rev-parse --abbrev-ref HEAD) -> $1"
         git reset --hard
         echo "RESET ✅"
