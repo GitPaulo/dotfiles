@@ -32,6 +32,16 @@ function timetoswitch() {
 }
 alias tts="timetoswitch"
 
+# Revert to original
+function revertbranch() {
+	echo "Reverting to origin version of branch"
+	git fetch origin
+	git reset --hard origin/$(git branch --show-current)
+	git clean -fd
+	echo "DONE ✅"
+}
+alias rb="revertbranch"
+
 # Here because of expansion?
 function vf() {
 	vim $(fzf)
