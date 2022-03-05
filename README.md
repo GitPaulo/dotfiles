@@ -13,5 +13,6 @@ git clone https://github.com/GitPaulo/dotfiles.git ~/dotfiles
 ~/dotfiles/setmeup
 ```
 
-*If using WSL make sure opening terminal as login shell \
-*for Debian based distros only
+## Notes
+- Things only work properly when using a **login** shell. TBC
+- Get fonts from: https://www.nerdfonts.com/font-downloads
