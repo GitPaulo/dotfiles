@@ -6,12 +6,17 @@
 
 export DOTFILES=~/dotfiles
 
+function prerequisites() {
+	# Packages and things ./setmeup relies on
+	echo "First things, first..."
+	sudo apt-get update
+	sudo apt-get upgrade -y
+	sudo apt-get install git -y
+	sudo apt-get install curl -y
+}
+
 function installations() {
 	cd "${DOTFILES}/installations" || exit
-	# Update first
-	echo "Making sure we good..."
-	sudo apt update
-	sudo apt upgrade -y
 	# Installations
 	for installation in ./*; do
 		echo "📦 → $installation"
@@ -96,7 +101,7 @@ function stowem() {
 				echo FAIL
 			fi
 		done
-	fi
+	fi⚠
 	cd -
 }
 
@@ -123,6 +128,16 @@ select env in "${envs[@]}"; do
 	esac
 done
 
+read -p "🚧 Run prerequisites? [y/n] "$'\n' answer2
+case ${answer2:0:1} in
+y | Y)
+	prerequisites
+	;;
+*)
+	echo " Skipped! Some installations might not work!"
+	;;
+esac
+
 read -p "🔗 Run stows? [y/n] "$'\n' answer2
 case ${answer2:0:1} in
 y | Y)
@@ -142,7 +157,7 @@ a | A)
 	installations $env true
 	;;
 *)
-	echo "Skipped installations..."
+	echo "⚠ Skipped installations..."
 	;;
 esac
 
