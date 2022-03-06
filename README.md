@@ -16,3 +16,6 @@ git clone https://github.com/GitPaulo/dotfiles.git ~/dotfiles
 ## Notes
 - Things only work properly when using a **login** shell. TBC
 - Get fonts from: https://www.nerdfonts.com/font-downloads
+- Terminals choices:
+    - windows/WSL: https://github.com/microsoft/terminal
+    - linux: http://guake-project.org/
