@@ -13,21 +13,22 @@ threshold = 10
 style = "bold red"
 
 [character]
-error_symbol = "[❌](bold red)"
+success_symbol = "[➜](bold green)"
+error_symbol = "[-](bold red)"
 
 [cmd_duration]
 min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
 format = "took [$duration]($style)"
-style = "bold #a4ff24"
+style = "bold #AEA79F"
 
 [directory]
 truncation_length = 5
 format = "[$path]($style)[$lock_symbol]($lock_style) "
-style = "bold #e37500"
+style = "bold #ff6d3b"
 
 [git_branch]
 format = "[$symbol$branch]($style) "
-style = "bold #3833b5"
+style = "bold #a3649d"
 
 [git_commit]
 commit_hash_length = 8
