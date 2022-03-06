@@ -5,10 +5,6 @@
 # (_)_.___/\__,_/____/_/ /_/_/   \___/
 # paulo's
 
-# I always use vim
-export VISUAL=vim;
-export EDITOR=vim;
-
 [ -x "$(which neofetch)" ] && neofetch
 
 # shell prompt (starship)
