@@ -1,3 +1,14 @@
 #!/usr/bin/env bash
 
-## Keybinds for bash shell
+## Keyboard shortcuts!
+## Ctrl-v + key in terminal to display keycode.
+## The ^[ represents Esc. The rest the actual key.
+
+# F1: Reload
+bind -x '"\eOP":"reload"'
+
+# F9: Ranger
+bind -x '"\e[20~":"ranger"'
+
+# F8: Tmux
+bind -x '"\e[19~":"tmux"'
