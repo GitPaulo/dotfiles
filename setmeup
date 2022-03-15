@@ -101,7 +101,7 @@ function stowem() {
 				echo FAIL
 			fi
 		done
-	fi⚠
+	fi
 	cd -
 }
 
