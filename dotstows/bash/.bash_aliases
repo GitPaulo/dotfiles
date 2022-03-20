@@ -71,3 +71,5 @@ alias path="echo -e ${PATH//:/\\n}"
 # xclip
 alias clipboard="xclip -i -selection clipboard"
 
+# git-standup
+alias gs="git-standup"
