@@ -5,7 +5,12 @@
 # (_)_.___/\__,_/____/_/ /_/_/   \___/
 # paulo's
 
+# neofetch
 [ -x "$(which neofetch)" ] && neofetch
+
+# load profile shortcut
+alias paulo="source $HOME/.bash_profile"
+bind -x '"\C-P":"paulo"' 
 
 # shell prompt (starship)
 eval "$(starship init bash)"
