@@ -10,7 +10,7 @@
 
 # load profile shortcut
 alias paulo="source $HOME/.bash_profile"
-bind -x '"\C-P":"paulo"' 
+[ -t 1 ] && bind -x '"\C-P":"paulo"' 
 
 # shell prompt (starship)
 eval "$(starship init bash)"
