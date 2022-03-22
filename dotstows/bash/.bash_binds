@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# binds skipped for NI shells
+[[ $- != *i* ]] && return
+
 ## Keyboard shortcuts!
 ## Ctrl-v + key in terminal to display keycode.
 ## The ^[ represents Esc. The rest the actual key.
