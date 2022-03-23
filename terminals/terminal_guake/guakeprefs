@@ -55,11 +55,13 @@ cursor-blink-mode=0
 cursor-shape=0
 
 [style/background]
-transparency=72
+transparency=74
 
 [style/font]
 allow-bold=true
 bold-is-bright=true
-palette='#000000000000:#A5A500000101:#0000BBBB0000:#FEFECCCC2222:#39399B9BDADA:#BBBB0000BBBB:#0000BBBBBBBB:#BBBBBBBBBBBB:#555555555555:#FFFF00000303:#9292C7C76363:#FEFEF7F77373:#A0A0D6D6FFFF:#FFFF5555FFFF:#5555FFFFFFFF:#FFFFFFFFFFFF:#CCCCCCCCCCCC:#272730303232'
-palette-name='Obsidian'
+cell-height-scale=1.1000000000000001
+cell-width-scale=1.0
+palette='#3c3c38383636:#eaea69696262:#a9a9b6b66565:#d8d8a6a65757:#b40c733bad01:#d3d386869b9b:#8989b4b48282:#d4d4bebe9898:#3c3c38383636:#eaea69696262:#a9a9b6b66565:#d8d8a6a65757:#8b92524f9b4d:#d3d386869b9b:#8989b4b48282:#d4d4bebe9898:#d4d4bebe9898:#282828282828'
+palette-name='Custom'
 style='FuraCode Nerd Font weight=453 11'
