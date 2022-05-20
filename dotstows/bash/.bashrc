@@ -14,3 +14,6 @@ alias paulo="source $HOME/.bash_profile"
 
 # shell prompt (starship)
 eval "$(starship init bash)"
+
+# git fzf
+source <(curl -sSL git.io/forgit)
