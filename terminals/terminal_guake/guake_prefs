@@ -1,10 +1,10 @@
 [general]
-background-image-file='/home/santosp/dotfiles/terminals/backgrounds/home_ubuntu.jpeg'
+background-image-file='/home/santosp/Pictures/Screenshot from 2022-05-08 18-15-17.png' # chane this to work_ubuntu
 background-image-layout-mode=0
 compat-delete='delete-sequence'
 default-shell='/bin/bash'
 display-n=0
-display-tab-names=0
+display-tab-names=2
 gtk-prefer-dark-theme=true
 gtk-theme-name='Adwaita-dark'
 gtk-use-system-default-theme=false
@@ -29,15 +29,15 @@ use-popup=true
 use-scrollbar=true
 use-trayicon=true
 window-halignment=0
-window-height=50
+window-height=48
 window-losefocus=false
 window-refocus=true
 window-tabbar=true
 window-width=100
 
 [keybindings/global]
-show-focus='F12'
-show-hide='grave'
+show-focus='F1'
+show-hide='F12'
 
 [keybindings/local]
 close-terminal='<Super>z'
@@ -55,13 +55,13 @@ cursor-blink-mode=0
 cursor-shape=0
 
 [style/background]
-transparency=74
+transparency=0
 
 [style/font]
 allow-bold=true
 bold-is-bright=true
 cell-height-scale=1.1000000000000001
 cell-width-scale=1.0
-palette='#3c3c38383636:#eaea69696262:#a9a9b6b66565:#d8d8a6a65757:#b40c733bad01:#d3d386869b9b:#8989b4b48282:#d4d4bebe9898:#3c3c38383636:#eaea69696262:#a9a9b6b66565:#d8d8a6a65757:#8b92524f9b4d:#d3d386869b9b:#8989b4b48282:#d4d4bebe9898:#d4d4bebe9898:#282828282828'
+palette='#2b2b30303b3b:#bfbf61616a6a:#a3a3bebe8c8c:#ebebcbcb8b8b:#8e814fcd6b72:#b4b48e8eadad:#9696b5b5b4b4:#ffffc443de98:#656573737e7e:#bfbf61616a6a:#a3a3bebe8c8c:#ebebcbcb8b8b:#9eb7672a86e9:#b4b48e8eadad:#9696b5b5b4b4:#ffffffffffff:#ffffcbf1e9d5:#3b3b2b2b36e3'
 palette-name='Custom'
 style='FuraCode Nerd Font weight=453 11'
